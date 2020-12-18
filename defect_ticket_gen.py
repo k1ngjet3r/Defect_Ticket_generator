@@ -1,10 +1,10 @@
 from openpyxl import load_workbook
 from docx import Document
 
-sw_build = 'Mainline,  W94I-W157.2.1-QIH22B-220 Dev-signed'
+sw_build = 'Mainline, W95I-W157.2.2-QIH22B-225_Dev-signed'
 
 
-def ticket_gen(input_file, sw):
+def ticket_gen(input_file):
     # Initialized the excel file which containing the detail
     sheet = load_workbook(str(input_file)).active
 
@@ -100,4 +100,4 @@ def ticket_gen(input_file, sw):
             ticket.save('{}.docx'.format(doc_name))
 
 
-ticket_gen('Defect_Tickets1.xlsx', sw_build)
+ticket_gen('Defect_Tickets1.xlsx')
