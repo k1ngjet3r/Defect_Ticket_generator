@@ -100,4 +100,4 @@ def ticket_gen(input_file):
             ticket.save('{}.docx'.format(doc_name))
 
 
-ticket_gen('Defect_Tickets1.xlsx')
+ticket_gen('Defect_Tickets.xlsx')
