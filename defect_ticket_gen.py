@@ -1,7 +1,7 @@
 from openpyxl import load_workbook
 from docx import Document
 
-sw_build = 'Mainline, W95I-W157.2.2-QIH22B-225_Dev-signed'
+# sw_build = 'Mainline, W95I-W157.2.2-QIH22B-225_Dev-signed'
 
 
 def ticket_gen(input_file):
