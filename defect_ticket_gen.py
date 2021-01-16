@@ -8,7 +8,7 @@ def ticket_gen(input_file):
     # Initialized the excel file which containing the detail
     sheet = load_workbook(str(input_file)).active
 
-    for row in sheet.iter_rows(max_col=11, values_only=True):
+    for row in sheet.iter_rows(max_col=12, values_only=True):
         row_data = [str(value) for value in row]
         doc_name = row_data[-1]
         if row_data[0] == 'Summary':
@@ -87,7 +87,7 @@ def ticket_gen(input_file):
             # Other
             sw = ticket.add_paragraph('')
             sw.add_run('SW build info: ').bold = True
-            sw.add_run(sw_build)
+            sw.add_run(row_data[11])
 
             contact = ticket.add_paragraph('')
             contact.add_run('Contact Phone Number: ').bold = True

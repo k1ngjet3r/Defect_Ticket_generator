@@ -1,1 +1,2 @@
 # Defect_ticket_generator
+Generate defect tickets automatically
