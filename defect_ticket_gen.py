@@ -10,7 +10,7 @@ def ticket_gen(input_file):
 
     for row in sheet.iter_rows(max_col=12, values_only=True):
         row_data = [str(value) for value in row]
-        doc_name = row_data[-1]
+        doc_name = row_data[-2]
         if row_data[0] == 'Summary':
             pass
         elif row_data[0] == 'None':
@@ -34,7 +34,7 @@ def ticket_gen(input_file):
             testing_type.add_run(row_data[1])
             # Connected Devices
             connected_devices = ticket.add_paragraph('')
-            connected_devices.add_run('Connected Devices ').bold = True
+            connected_devices.add_run('Connected Devices: ').bold = True
             connected_devices.add_run(row_data[2])
             ticket.add_paragraph(row_data[3])
             # Test Steps
@@ -100,4 +100,4 @@ def ticket_gen(input_file):
             ticket.save('{}.docx'.format(doc_name))
 
 
-ticket_gen('Defect_Tickets.xlsx')
+ticket_gen('W05 Defect Tickets Gen.xlsx')
