@@ -95,7 +95,7 @@ def ticket_gen(input_file):
 
             sub = ticket.add_paragraph('')
             sub.add_run('Submitter: ').bold = True
-            sub.add_run('<<<rick.weng@cienet.com>>')
+            sub.add_run('Create on the behalf of Rick Weng <<<jeter.lin@cienet.com>>>')
 
             ticket.save('{}.docx'.format(doc_name))
 
