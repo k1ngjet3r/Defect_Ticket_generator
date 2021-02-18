@@ -91,13 +91,13 @@ def ticket_gen(input_file):
 
             contact = ticket.add_paragraph('')
             contact.add_run('Contact Phone Number: ').bold = True
-            contact.add_run('+886 966603203')
+            contact.add_run('+886 970211299')
 
             sub = ticket.add_paragraph('')
             sub.add_run('Submitter: ').bold = True
-            sub.add_run('Create on the behalf of Rick Weng <<<jeter.lin@cienet.com>>>')
+            sub.add_run('Jeter Lin, create on the behalf of Rick Weng <<<jeter.lin@cienet.com>>>')
 
             ticket.save('{}.docx'.format(doc_name))
 
 
-ticket_gen('W05 Defect Tickets Gen.xlsx')
+ticket_gen('W08 Defect Tickets Gen.xlsx')
