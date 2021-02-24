@@ -8,9 +8,9 @@ def ticket_gen(input_file):
     # Initialized the excel file which containing the detail
     sheet = load_workbook(str(input_file)).active
 
-    for row in sheet.iter_rows(max_col=12, values_only=True):
+    for row in sheet.iter_rows(max_col=13, values_only=True):
         row_data = [str(value) for value in row]
-        doc_name = row_data[-2]
+        doc_name = row_data[10].split('\n')[0]
         if row_data[0] == 'Summary':
             pass
         elif row_data[0] == 'None':
@@ -94,10 +94,12 @@ def ticket_gen(input_file):
             contact.add_run('+886 970211299')
 
             sub = ticket.add_paragraph('')
+            submitter = row_data[12]
+            email_address = submitter.replace(' ', '.').lower() + '@cienet.com'
             sub.add_run('Submitter: ').bold = True
-            sub.add_run('Jeter Lin, create on the behalf of Rick Weng <<<jeter.lin@cienet.com>>>')
+            sub.add_run('{} <<<{}>>>, create on the behalf of Rick Weng'.format(submitter, email_address))
 
             ticket.save('{}.docx'.format(doc_name))
 
 
-ticket_gen('W08 Defect Tickets Gen.xlsx')
+ticket_gen('W09 Defect Tickets Gen.xlsx')
