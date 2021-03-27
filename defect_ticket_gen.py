@@ -101,5 +101,5 @@ def ticket_gen(input_file):
 
             ticket.save('{}.docx'.format(doc_name))
 
-
-ticket_gen('W13 Defect Tickets Gen.xlsx')
+if __name__ == '__main__':
+    ticket_gen('W13 Defect Tickets Gen.xlsx')
