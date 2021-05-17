@@ -6,7 +6,7 @@ from docx import Document
 
 def ticket_gen(input_file):
     # Initialized the excel file which containing the detail
-    sheet = load_workbook(input_file)['Defects']
+    sheet = load_workbook(input_file)['Defect']
 
     for row in sheet.iter_rows(max_col=13, values_only=True):
         row_data = [str(value) for value in row]
