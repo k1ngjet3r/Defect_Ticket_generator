@@ -6,11 +6,7 @@ from docx import Document
 
 def ticket_gen(input_file):
     # Initialized the excel file which containing the detail
-<<<<<<< HEAD
     sheet = load_workbook(input_file)['Defect']
-=======
-    sheet = load_workbook(input_file)['defects']
->>>>>>> parent of 6448146 (20)
 
     for row in sheet.iter_rows(max_col=13, values_only=True):
         row_data = [str(value) for value in row]
@@ -106,12 +102,4 @@ def ticket_gen(input_file):
             ticket.save('{}.docx'.format(doc_name))
 
 if __name__ == '__main__':
-<<<<<<< HEAD
-<<<<<<< HEAD
-    ticket_gen('W21 Defect Tickets Gen.xlsx')
-=======
-    ticket_gen('W18 Defect Tickets Gen.xlsx')
->>>>>>> 521856137bb1829579d9d5f732b5867fd6df9bc1
-=======
-    ticket_gen('W18 Defect Tickets Gen.xlsx')
->>>>>>> parent of 6448146 (20)
+    ticket_gen('W22 Defect Tickets Gen.xlsx')
