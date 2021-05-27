@@ -102,4 +102,8 @@ def ticket_gen(input_file):
             ticket.save('{}.docx'.format(doc_name))
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     ticket_gen('W21 Defect Tickets Gen.xlsx')
+=======
+    ticket_gen('W18 Defect Tickets Gen.xlsx')
+>>>>>>> 521856137bb1829579d9d5f732b5867fd6df9bc1
