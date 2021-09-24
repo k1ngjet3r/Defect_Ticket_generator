@@ -97,7 +97,7 @@ def ticket_gen(input_file):
             submitter = row_data[12]
             email_address = submitter.replace(' ', '.').lower() + '@cienet.com'
             sub.add_run('Submitter: ').bold = True
-            sub.add_run('{} <<<{}>>>, create on the behalf of Rick Weng'.format(submitter, email_address))
+            sub.add_run('{} <<<{}>>>, create on the behalf of Maggie Chang'.format(submitter, email_address))
 
             ticket.save('{}.docx'.format(doc_name))
 
