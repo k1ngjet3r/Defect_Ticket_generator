@@ -91,7 +91,7 @@ def ticket_gen(input_file):
 
             contact = ticket.add_paragraph('')
             contact.add_run('Contact Phone Number: ').bold = True
-            contact.add_run('+886 970211299')
+            contact.add_run('+886 978192232')
 
             sub = ticket.add_paragraph('')
             submitter = row_data[12]
